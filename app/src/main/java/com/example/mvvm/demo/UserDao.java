@@ -1,4 +1,4 @@
-package com.example.mvvm;
+package com.example.mvvm.demo;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

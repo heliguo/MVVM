@@ -1,4 +1,4 @@
-package com.example.mvvm;
+package com.example.mvvm.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityViewBindingBinding;
 import com.example.mvvm.score.ScoreActivity;
 

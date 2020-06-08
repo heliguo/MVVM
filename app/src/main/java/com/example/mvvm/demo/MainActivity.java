@@ -1,12 +1,12 @@
-package com.example.mvvm;
+package com.example.mvvm.demo;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.room.Room;
 
+import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityViewBindingBinding;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.mvvm;
+package com.example.mvvm.demo;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
