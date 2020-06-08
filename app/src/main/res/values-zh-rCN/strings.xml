@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="team_a">A队</string>
+    <string name="team_b">B队</string>
+    <string name="button">button</string>
+    <string name="bindfragment">view from bind fragment</string>
+    <string name="hello_blank_fragment">value</string>
+    <string name="bingfragment">view from binding fragment</string>
+    <string name="a_0">0</string>
+    <string name="b_0">0</string>
+    <string name="a_2">+2</string>
+    <string name="a_1">+1</string>
+    <string name="a_3">+3</string>
+    <string name="b_3">+3</string>
+    <string name="b_2">+2</string>
+    <string name="b_1">+1</string>
+    <string name="undo">撤销</string>
+    <string name="reset">重置</string>
+    <string name="sp_save">save</string>
+    <string name="detail">detail</string>
+    <string name="detail_button">Button</string>
+    <string name="home">home</string>
+    <string name="home_button">Button</string>
+
+</resources>
