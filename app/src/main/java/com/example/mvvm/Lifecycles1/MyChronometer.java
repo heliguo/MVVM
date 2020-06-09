@@ -1,4 +1,4 @@
-package com.example.mvvm.Lifecycles;
+package com.example.mvvm.Lifecycles1;
 
 import android.content.Context;
 import android.os.SystemClock;
@@ -14,15 +14,15 @@ import androidx.lifecycle.OnLifecycleEvent;
  */
 public class MyChronometer extends Chronometer implements LifecycleObserver {
 
-    private long elapsedTime;
+    private  long elapsedTime;
 
-    public MyChronometer(Context context) {
-        this(context, null);
-    }
-
-    public MyChronometer(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
+//    public MyChronometer(Context context) {
+//        this(context, null);
+//    }
+//
+//    public MyChronometer(Context context, AttributeSet attrs) {
+//        this(context, attrs, 0);
+//    }
 
     public MyChronometer(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);

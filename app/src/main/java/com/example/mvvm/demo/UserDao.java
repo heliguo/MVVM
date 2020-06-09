@@ -79,4 +79,7 @@ public interface UserDao {
     //同上
     @Delete
     int deleteAll(User... users);
+
+    @Query("DELETE from user")
+    int deleteAll();
 }
