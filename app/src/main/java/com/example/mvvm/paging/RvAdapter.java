@@ -17,6 +17,8 @@ import com.example.mvvm.R;
  */
 class RvAdapter extends PagedListAdapter<Student, RvAdapter.MyViewHolder> {
 
+    OnClick mOnClick;
+
 
     protected RvAdapter() {
         super(new DiffUtil.ItemCallback<Student>() {
@@ -35,20 +37,35 @@ class RvAdapter extends PagedListAdapter<Student, RvAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item, parent, false);
-        return new MyViewHolder(inflate);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Student item = getItem(position);
-        if (item!=null){
+        if (item != null) {
             holder.mTextView.setText(String.valueOf(item.getStudentNumber()));
-        }else{
+        } else {
             holder.mTextView.setText(R.string.str_loading);
         }
+        holder.mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnClick != null) {
+                    mOnClick.onclick();
+                }
+            }
+        });
 
+    }
 
+    public void setOnClick(OnClick onClick) {
+        mOnClick = onClick;
+    }
+
+    public interface OnClick {
+        void onclick();
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {

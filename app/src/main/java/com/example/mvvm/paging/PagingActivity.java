@@ -16,13 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityPagingBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PagingActivity extends AppCompatActivity {
 
     ActivityPagingBinding        mBinding;
     StudentDao                   mDao;
     StudentDatabase              mDatabase;
     LiveData<PagedList<Student>> mLiveData;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,12 @@ public class PagingActivity extends AppCompatActivity {
 
         mBinding.btnClear.setOnClickListener(v -> {
             new ClearAsync(mDao).execute();
+        });
+        adapter.setOnClick(new RvAdapter.OnClick() {
+            @Override
+            public void onclick() {
+                Log.e("TAG", "onclick: ");
+            }
         });
 
     }
