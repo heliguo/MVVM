@@ -16,9 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityPagingBinding;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PagingActivity extends AppCompatActivity {
 
     ActivityPagingBinding        mBinding;

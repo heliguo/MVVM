@@ -4,14 +4,22 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--    sharedUserId 本文详细介绍-->
+    <!--    为用户提供一个可读的标签，value仅能使用资源id-->
+    <!--    安装位置 默认internalOnly：只能安装在内部存储中；
+    preferExternal：安装在外部存储中，当不可用时安装在内部存储中，
+    安装后用户可以通过系统设置移动安装位置；auto：用户可以选择安装在内部存储还是外部存储中。-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:sharedUserId="com.example.mvvm.share"
+        android:sharedUserLabel="@string/app_name"
+        android:installLocation="internalOnly"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".gallery.VolleyActivity"></activity>
+        <activity android:name=".gallery.VolleyActivity" />
         <activity android:name=".paging.PagingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +30,7 @@
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".demo.MainActivity" />
         <activity android:name=".demo.ViewBindingActivity" />
-        <activity android:name=".score.ScoreActivity"></activity>
+        <activity android:name=".score.ScoreActivity" />
     </application>
 
 </manifest>
