@@ -6,7 +6,6 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityViewBindingBinding;
 
 import java.util.List;
@@ -18,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         mActivityMainBinding = ActivityViewBindingBinding.inflate(getLayoutInflater());
+        setContentView(mActivityMainBinding.getRoot());
         /**
          * params 上下文、表实体、数据库名
          */
