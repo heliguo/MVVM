@@ -6,6 +6,7 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import com.example.mvvm.databinding.ActivityMainBinding;
 import com.example.mvvm.databinding.ActivityViewBindingBinding;
 
 import java.util.List;
@@ -13,6 +14,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ActivityViewBindingBinding mActivityMainBinding;
+    ActivityMainBinding mMainBinding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

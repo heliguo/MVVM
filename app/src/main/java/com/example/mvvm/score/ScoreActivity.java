@@ -3,10 +3,13 @@ package com.example.mvvm.score;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.mvvm.R;
 import com.example.mvvm.databinding.ActivityScoreBinding;
@@ -24,6 +27,7 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mScoreBinding = DataBindingUtil.setContentView(this, R.layout.activity_score);
         mScoreViewModel = new ViewModelProvider(this).get(ScoreViewModel.class);
+
         mScoreBinding.setData(mScoreViewModel);
         mScoreBinding.setLifecycleOwner(this);
     }

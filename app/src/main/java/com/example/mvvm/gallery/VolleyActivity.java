@@ -44,6 +44,7 @@ public class VolleyActivity extends AppCompatActivity {
                 }
         );
         queue.add(request);
+        queue.start();
 
         ImageLoader imageLoader = new ImageLoader(queue, new ImageLoader.ImageCache() {
 
